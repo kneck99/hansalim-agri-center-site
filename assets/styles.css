@@ -253,7 +253,7 @@ a{text-decoration:none;color:inherit}
 .intro-copy-grid{display:grid;gap:26px}
 .intro-copy-grid p{margin:0;font-size:18px;line-height:1.95;color:var(--text);word-break:keep-all}
 .intro-bottom-logo{display:flex;justify-content:center;align-items:center;margin-top:48px}
-.intro-bottom-logo img{width:min(60%,210px);height:auto;object-fit:contain}
+.intro-bottom-logo img{width:min(100%,380px);height:auto;object-fit:contain}
 .space-intro-card{padding:30px}
 .space-intro-layout{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:center}
 .space-intro-illustration{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#f7f2e8,#f2ecdf);border:1px solid var(--line);border-radius:22px;padding:20px;min-height:280px}
