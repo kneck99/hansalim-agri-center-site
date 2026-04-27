@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title>한살림 로고</title>
+  <desc>녹색 원형과 중앙의 세로형 잎 모양 심볼</desc>
+  <circle cx="32" cy="32" r="30" fill="#9BCB1E"/>
+  <rect x="26.5" y="11" width="11" height="42" rx="5.5" fill="#00281B"/>
+</svg>
