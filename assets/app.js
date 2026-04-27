@@ -97,28 +97,6 @@
   window.addEventListener('load', resizeEmbeds);
   resizeEmbeds();
 
-  function fitEmbed(iframe, baseWidth, baseHeight) {
-    if (!iframe) return;
-    const box = iframe.parentElement;
-    if (!box) return;
-    const width = box.clientWidth || baseWidth;
-    const scale = Math.min(1, width / baseWidth);
-    box.classList.add('embed-enhanced');
-    box.style.height = `${Math.round(baseHeight * scale)}px`;
-    iframe.classList.add('scaled-embed');
-    iframe.style.width = `${baseWidth}px`;
-    iframe.style.height = `${baseHeight}px`;
-    iframe.style.transform = `scale(${scale})`;
-  }
-
-  function resizeEmbeds() {
-    fitEmbed(cal, window.innerWidth <= 720 ? 860 : 980, window.innerWidth <= 720 ? 620 : 700);
-    fitEmbed(map, window.innerWidth <= 720 ? 860 : 980, window.innerWidth <= 720 ? 420 : 520);
-  }
-  window.addEventListener('resize', resizeEmbeds);
-  window.addEventListener('load', resizeEmbeds);
-  resizeEmbeds();
-
   const track = q('[data-carousel-track]');
   const dots = q('[data-carousel-dots]');
   const prev = q('[data-prev-slide]');
