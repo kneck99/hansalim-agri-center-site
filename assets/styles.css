@@ -126,7 +126,7 @@ a{text-decoration:none;color:inherit}
 .embed-box{
   position: relative;
   aspect-ratio: 16 / 9;
-  min-height: 480px;
+  min-height: 720px;
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
