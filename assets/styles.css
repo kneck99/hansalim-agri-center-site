@@ -249,12 +249,17 @@ a{text-decoration:none;color:inherit}
 .intro-plain-head h1{margin-bottom:14px}
 .intro-plain-page{padding-top:10px}
 .intro-plain-wrap{max-width:980px}
-.intro-plain-card{padding:40px 42px}
-.intro-logo-sign{display:inline-flex;align-items:center;gap:12px;margin-bottom:26px}
-.intro-logo-sign img{width:34px;height:34px;object-fit:contain}
-.intro-logo-sign span{font-size:22px;font-weight:700;color:var(--text)}
+.intro-text-only{padding:10px 8px 0}
 .intro-copy-grid{display:grid;gap:26px}
 .intro-copy-grid p{margin:0;font-size:18px;line-height:1.95;color:var(--text);word-break:keep-all}
+.intro-bottom-logo{display:flex;justify-content:center;align-items:center;margin-top:48px}
+.intro-bottom-logo img{width:min(100%,720px);height:auto;object-fit:contain}
+.space-intro-card{padding:30px}
+.space-intro-layout{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:center}
+.space-intro-illustration{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#f7f2e8,#f2ecdf);border:1px solid var(--line);border-radius:22px;padding:20px;min-height:280px}
+.space-intro-illustration img{max-width:100%;max-height:280px;object-fit:contain}
+.space-intro-copy .page-label{display:block}
+.floor-list-textonly .floor-card{padding:26px 28px}
 
 .footer-links-strip{padding:22px 0 0}
 .footer-links-inner{display:flex;justify-content:flex-end;gap:12px;flex-wrap:wrap}
@@ -277,7 +282,9 @@ a{text-decoration:none;color:inherit}
   .cta-actions{justify-content:flex-start}
   .embed-box{min-height:420px}
   .floor-media-grid{grid-template-columns:1fr 1fr}
+  .space-intro-layout{grid-template-columns:260px 1fr}
 }
+
 @media (max-width:720px){
   .container{width:min(calc(100% - 20px), var(--max))}
   .nav{flex-direction:column;align-items:flex-start;gap:12px;padding:12px 0}
@@ -302,9 +309,12 @@ a{text-decoration:none;color:inherit}
   .floor-media-grid img{height:220px}
   .menu-image-box img{height:220px}
   .price-list li{align-items:flex-start;flex-direction:column;gap:4px}
-  .intro-plain-card{padding:24px 20px}
-  .intro-logo-sign{margin-bottom:18px}
-  .intro-logo-sign span{font-size:18px}
+  .intro-text-only{padding:4px 0 0}
   .intro-copy-grid{gap:18px}
   .intro-copy-grid p{font-size:16px;line-height:1.85}
+  .intro-bottom-logo{margin-top:30px}
+  .space-intro-card{padding:20px}
+  .space-intro-layout{grid-template-columns:1fr;gap:18px}
+  .space-intro-illustration{min-height:220px;padding:16px}
+  .space-intro-illustration img{max-height:220px}
 }
