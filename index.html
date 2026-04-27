@@ -15,7 +15,10 @@
       <img src="assets/symbol-logo.png" alt="한살림 로고" class="brand-logo">
       <span class="brand-text"><div class="brand-title">한살림 농업살림센터</div></span>
     </a>
-    <nav class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="site-nav">
       <a class="active" href="index.html">홈</a>
       <a href="pages/guide.html">이용안내</a>
       <a href="pages/intro.html">한살림농업살림센터 소개</a>
@@ -27,7 +30,7 @@
 </header>
 <section class="hero">
   <div class="container hero-inner">
-    <span class="kicker">한살림생산자연합회</span>
+    <span class="kicker">회의실 · 연수원 · 식음 안내</span>
     <h1>한살림 농업살림센터</h1>
     <p>예약현황, 공간 소개, 층별안내, 카페·식당 단체예약까지 한 곳에서 확인하실 수 있습니다.</p>
     <div class="hero-actions">
@@ -55,6 +58,10 @@
           <span class="badge">예약 안내</span>
           <h3>회의실 · 연수원 예약 바로가기</h3>
           <p>회의실과 연수원 예약은 기존 예약 시스템을 통해 진행하실 수 있습니다. 이용 전 예약현황과 공간 정보를 먼저 확인해 주세요.</p>
+          <div class="price-inline-note">
+            <strong>연수원 이용요금</strong>
+            <span>1~8인 150,000원 / 9인부터 1인당 20,000원 추가</span>
+          </div>
         </div>
         <div class="cta-actions">
           <a class="btn btn-primary" data-reserve-link href="#" target="_blank" rel="noopener">예약 시스템 열기</a>
@@ -133,8 +140,6 @@
     <div>
       <div class="brand-title footer-brand-title">한살림 농업살림센터</div>
       <p class="muted-light tiny">
-        사업자: 주식회사 청주농업살림<br>
-        등록번호 : 426-81-01461<br>
         주소: <span data-business-address></span><br>
         대표 유선번호: <span data-business-phone></span><br>
         이메일: <span data-business-email></span>

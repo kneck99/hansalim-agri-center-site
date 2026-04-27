@@ -21,6 +21,49 @@
   const map = q('[data-map-embed]');
   if (map && cfg.mapEmbedUrl) map.src = cfg.mapEmbedUrl;
 
+  const navToggle = q('.nav-toggle');
+  const navLinks = q('.nav-links');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('is-open');
+      navToggle.classList.toggle('is-open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+    });
+    qa('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 720) {
+          navLinks.classList.remove('is-open');
+          navToggle.classList.remove('is-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+          navToggle.setAttribute('aria-label', '메뉴 열기');
+        }
+      });
+    });
+  }
+
+  function fitEmbed(iframe, baseWidth, baseHeight) {
+    if (!iframe) return;
+    const box = iframe.parentElement;
+    if (!box) return;
+    const width = box.clientWidth || baseWidth;
+    const scale = Math.min(1, width / baseWidth);
+    box.classList.add('embed-enhanced');
+    box.style.height = `${Math.round(baseHeight * scale)}px`;
+    iframe.classList.add('scaled-embed');
+    iframe.style.width = `${baseWidth}px`;
+    iframe.style.height = `${baseHeight}px`;
+    iframe.style.transform = `scale(${scale})`;
+  }
+
+  function resizeEmbeds() {
+    fitEmbed(cal, window.innerWidth <= 720 ? 860 : 980, window.innerWidth <= 720 ? 620 : 700);
+    fitEmbed(map, window.innerWidth <= 720 ? 860 : 980, window.innerWidth <= 720 ? 420 : 520);
+  }
+  window.addEventListener('resize', resizeEmbeds);
+  window.addEventListener('load', resizeEmbeds);
+  resizeEmbeds();
+
   const track = q('[data-carousel-track]');
   const dots = q('[data-carousel-dots]');
   const prev = q('[data-prev-slide]');
