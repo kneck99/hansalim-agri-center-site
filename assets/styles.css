@@ -514,6 +514,279 @@ a { color: inherit; text-decoration: none; }
   .footer-links-inner { justify-content: flex-start; }
 }
 
+/* ===== 공개 오픈용 보정 ===== */
+.brand-sub {
+  display: none !important;
+}
+
+.brand-title {
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.page-hero.compact {
+  padding: 56px 0 18px;
+  background: transparent;
+}
+
+.page-hero.compact h1 {
+  margin: 0 0 8px;
+}
+
+.page-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.intro-hero-grid {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.intro-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.intro-lead {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.stat-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(50% - 7px);
+  min-height: 84px;
+  padding: 16px 20px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.illus-card {
+  background: linear-gradient(135deg, rgba(53,90,71,.18), rgba(15,74,60,.08));
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.illus-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.section-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.section-block {
+  margin-top: 28px;
+}
+
+.simple-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.simple-card.wide {
+  padding: 30px;
+}
+
+.simple-card h2,
+.simple-card h3 {
+  margin: 0 0 12px;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+.simple-card h2 {
+  font-size: 34px;
+}
+
+.simple-card h3 {
+  font-size: 24px;
+}
+
+.simple-card p,
+.simple-card li {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.inner-card {
+  box-shadow: none;
+  background: rgba(255,255,255,0.55);
+}
+
+.notice-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.btn-wrap {
+  margin-top: 20px;
+}
+
+.footer-links-strip {
+  padding-top: 0;
+}
+
+.footer-grid {
+  align-items: start;
+}
+
+.footer-policy-note {
+  text-align: right;
+}
+
+/* ===== 네비/버튼/텍스트 반응형 ===== */
+@media (max-width: 1024px) {
+  .intro-hero-grid,
+  .section-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .nav-links {
+    gap: 10px 14px;
+  }
+
+  .illus-card img {
+    min-height: 260px;
+  }
+
+  .footer-policy-note {
+    text-align: left;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: min(calc(100% - 20px), var(--max));
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+  }
+
+  .brand {
+    gap: 12px;
+  }
+
+  .brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-title {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 10px 14px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .page-hero.compact {
+    padding: 34px 0 12px;
+  }
+
+  .page-hero.compact h1 {
+    font-size: clamp(36px, 10vw, 60px);
+    line-height: 1.05;
+  }
+
+  .page-label {
+    font-size: 15px;
+  }
+
+  .intro-lead,
+  .simple-card p,
+  .simple-card li {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .stat-chip {
+    width: 100%;
+    min-height: 72px;
+    min-width: 0;
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+
+  .simple-card,
+  .simple-card.wide,
+  .content-card,
+  .info-card {
+    padding: 20px;
+  }
+
+  .simple-card h2 {
+    font-size: 28px;
+  }
+
+  .simple-card h3 {
+    font-size: 21px;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .illus-card img {
+    min-height: 220px;
+  }
+
+  .footer-links-inner {
+    justify-content: flex-start;
+  }
+}
 
 .section.tight-top { padding-top: 24px; }
 .stat-grid { display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:16px; margin-top:24px; }
