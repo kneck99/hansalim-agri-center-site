@@ -81,22 +81,6 @@
     iframe.style.transform = `scale(${scale})`;
   }
 
-  function resizeEmbeds() {
-    const isMobile = window.innerWidth <= 720;
-
-    if (isMobile) {
-      fitEmbedMobile(cal, 980, 700);
-      fitEmbedMobile(map, 980, 520);
-    } else {
-      resetEmbed(cal);
-      resetEmbed(map);
-    }
-  }
-
-  window.addEventListener('resize', resizeEmbeds);
-  window.addEventListener('load', resizeEmbeds);
-  resizeEmbeds();
-
   const track = q('[data-carousel-track]');
   const dots = q('[data-carousel-dots]');
   const prev = q('[data-prev-slide]');
